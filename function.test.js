@@ -1,5 +1,14 @@
 const functions = require('./function')
 
+// beforeEach(() => function1())
+// afterEach(() => function2())
+
+beforeAll(() => function1())
+afterAll(() => function2())
+
+const function1 = () => { console.log('initialized') }
+const function2 = () => { console.log('closed') }
+
 test('add 2+2 is equal to 4', () => {
   expect(functions.add(2, 2)).toBe(4)
 })
